@@ -5,6 +5,11 @@
 
 version: 2
 updates:
+  # Maintain Python dependencies declared in the root pyproject.toml.
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
   # Enable version updates for GitHub Actions
   - package-ecosystem: "github-actions"
     # Look for GitHub Actions workflows in the `root` directory
